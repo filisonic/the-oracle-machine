@@ -4,6 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Oracle Machine — A kinetic installation</title>
+  <script>
+    (function() {
+      var cookie = document.cookie.match(/\bpreferred_lang=([a-z]{2})\b/);
+      var preferred = cookie ? cookie[1] : null;
+      var map = { es: 'es', ca: 'ca', it: 'it', fr: 'fr', nl: 'nl', de: 'de' };
+      if (preferred) {
+        if (map[preferred]) { window.location.replace(map[preferred] + '.html'); }
+        return;
+      }
+      var lang = (navigator.language || navigator.userLanguage || 'en').split('-')[0].toLowerCase();
+      var target = map[lang] || 'es';
+      document.cookie = 'preferred_lang=' + target + '; path=/; max-age=31536000';
+      if (target !== 'en') { window.location.replace(target + '.html'); }
+    })();
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=DM+Sans:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
@@ -13,6 +28,15 @@
   <main>
     <!-- 1. HERO (background image: put hero-bg.jpg in assets/images/) -->
     <section class="hero" style="--hero-bg: url('assets/images/hero-bg.png');">
+      <nav class="lang-switcher" aria-label="Language">
+        <span class="lang-switcher__current">EN</span>
+        <a href="es.html" hreflang="es">ES</a>
+        <a href="ca.html" hreflang="ca">CA</a>
+        <a href="it.html" hreflang="it">IT</a>
+        <a href="fr.html" hreflang="fr">FR</a>
+        <a href="nl.html" hreflang="nl">NL</a>
+        <a href="de.html" hreflang="de">DE</a>
+      </nav>
       <h1 class="hero__title">The Oracle Machine</h1>
       <p class="hero__tagline">A kinetic installation</p>
       <p class="hero__artist">— Philip C Philip —</p>
@@ -87,6 +111,15 @@
 
     <!-- 8. FOOTER -->
     <footer class="footer">
+      <nav class="lang-switcher lang-switcher--footer" aria-label="Language">
+        <span class="lang-switcher__current">EN</span>
+        <a href="es.html" hreflang="es">ES</a>
+        <a href="ca.html" hreflang="ca">CA</a>
+        <a href="it.html" hreflang="it">IT</a>
+        <a href="fr.html" hreflang="fr">FR</a>
+        <a href="nl.html" hreflang="nl">NL</a>
+        <a href="de.html" hreflang="de">DE</a>
+      </nav>
       <p class="footer__name">Philip C Philip</p>
       <p class="footer__contact"><a href="mailto:filisonic.me@gmail.com">filisonic.me@gmail.com</a></p>
       <p class="footer__line">For inquiries and exhibition proposals</p>

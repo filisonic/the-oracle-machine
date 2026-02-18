@@ -48,6 +48,30 @@ body {
 .hero .hero__title,
 .hero .hero__tagline,
 .hero .hero__artist { position: relative; z-index: 1; }
+
+/* Language switcher */
+.lang-switcher {
+  position: absolute;
+  top: var(--space);
+  right: var(--space);
+  z-index: 2;
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+}
+.lang-switcher a {
+  color: rgba(232, 228, 220, 0.9);
+  text-decoration: none;
+}
+.lang-switcher a:hover { color: var(--accent); }
+.lang-switcher__current { color: rgba(232, 228, 220, 0.85); }
+.lang-switcher--footer {
+  position: static;
+  margin-bottom: 1rem;
+}
 .hero__title {
   font-family: var(--serif);
   font-weight: 300;
