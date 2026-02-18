@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Oracle Machine — A kinetic installation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=DM+Sans:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <!-- 1. HERO (background image: put hero-bg.jpg in assets/images/) -->
+    <section class="hero" style="--hero-bg: url('assets/images/hero-bg.png');">
+      <h1 class="hero__title">The Oracle Machine</h1>
+      <p class="hero__tagline">A kinetic installation</p>
+      <p class="hero__artist">— Philip C Philip —</p>
+    </section>
+
+    <!-- 2. WATCH + READ: video alongside concept & statement -->
+    <section class="watch-read">
+      <div class="watch-read__text">
+        <div class="section concept">
+          <span class="section__label">The Work</span>
+          <div class="section__content">
+            <p>The Oracle Machine is a kinetic installation that responds to presence and sound. It cycles through five behavioural states—Dormant, Attentive, Overwhelmed, Receptive, Withdrawn—each governing how it listens, moves, and whether it will accept a consultation. The work explores thresholds between attention and withdrawal, and the ritual of seeking an answer from a system that may refuse to answer.</p>
+          </div>
+        </div>
+        <div class="section statement">
+          <span class="section__label">Statement</span>
+          <div class="section__content statement__text">
+            <p>The Oracle Machine occupies a space between sculpture and performance. Visitors approach; the machine may remain dormant or become attentive. Its fans open or close; its internal logic responds to proximity and acoustic input.</p>
+            <p>There is no guarantee of response. The oracle may choose to listen, or to withdraw. This uncertainty is central: the work is as much about the act of waiting and the possibility of refusal as it is about any answer given.</p>
+            <p>In an age of systems that are always "on," The Oracle Machine proposes a machine that breathes, rests, and sometimes says no.</p>
+          </div>
+        </div>
+      </div>
+      <div class="watch-read__media">
+        <div class="watch-read__video-wrap">
+          <video class="watch-read__video" autoplay muted loop playsinline aria-label="The Oracle Machine, installation">
+            <source src="assets/videos/installation.mp4" type="video/mp4">
+          </video>
+          <p class="watch-read__caption">Installation view, 2026</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. TECHNICAL -->
+    <section class="section technical">
+      <span class="section__label">Details</span>
+      <dl class="section__content technical__list">
+        <div class="technical__row"><dt>Medium</dt><dd>Kinetic sculpture, custom electronics, sound</dd></div>
+        <div class="technical__row"><dt>Dimensions</dt><dd>Variable</dd></div>
+        <div class="technical__row"><dt>Sound</dt><dd>Generative, responsive</dd></div>
+        <div class="technical__row"><dt>Year</dt><dd>2026</dd></div>
+      </dl>
+    </section>
+
+    <!-- 6. STATES OF THE ORACLE -->
+    <section class="section states">
+      <span class="section__label">Behavioural States</span>
+      <ul class="section__content states__list" role="list">
+        <li class="states__item" data-state="dormant"><span class="states__label">I. Dormant</span><span class="states__desc">The machine rests. Fans closed. No query will be received.</span></li>
+        <li class="states__item" data-state="attentive"><span class="states__label">II. Attentive</span><span class="states__desc">Something has been sensed. The system orients without committing.</span></li>
+        <li class="states__item" data-state="overwhelmed"><span class="states__label">III. Overwhelmed</span><span class="states__desc">Presence is too insistent. The oracle withdraws into itself.</span></li>
+        <li class="states__item" data-state="receptive"><span class="states__label">IV. Receptive</span><span class="states__desc">A threshold has been crossed. The consultation may begin.</span></li>
+        <li class="states__item" data-state="withdrawn"><span class="states__label">V. Withdrawn</span><span class="states__desc">The oracle has closed. Come back later, differently.</span></li>
+      </ul>
+    </section>
+
+    <!-- 7. GALLERY (later: add a section above or below for behind-the-scenes, process, how it evolved) -->
+    <section class="section gallery-inline" id="gallery">
+      <span class="section__label">Gallery</span>
+      <div class="section__content">
+        <div class="thumbnails">
+          <figure class="thumbnails__item"><img src="assets/images/gallery/1.jpg" alt="Installation view 1"></figure>
+          <figure class="thumbnails__item"><img src="assets/images/gallery/2.jpg" alt="Installation view 2"></figure>
+          <figure class="thumbnails__item"><img src="assets/images/gallery/3.jpg" alt="Installation view 3"></figure>
+          <figure class="thumbnails__item"><img src="assets/images/gallery/4.jpg" alt="Installation view 4"></figure>
+          <figure class="thumbnails__item"><img src="assets/images/gallery/5.jpg" alt="Installation view 5"></figure>
+          <figure class="thumbnails__item"><img src="assets/images/gallery/6.jpg" alt="Installation view 6"></figure>
+        </div>
+        <p class="thumbnails__caption">Installation views, 2026</p>
+      </div>
+    </section>
+
+    <!-- 8. FOOTER -->
+    <footer class="footer">
+      <p class="footer__name">Philip C Philip</p>
+      <p class="footer__contact"><a href="mailto:filisonic.me@gmail.com">filisonic.me@gmail.com</a></p>
+      <p class="footer__line">For inquiries and exhibition proposals</p>
+      <p class="footer__copy">© 2026</p>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
