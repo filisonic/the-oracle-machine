@@ -229,6 +229,11 @@ body {
   opacity: 1;
   margin-top: 0.5em;
 }
+.states--expanded .states__desc {
+  max-height: 6em;
+  opacity: 1;
+  margin-top: 0.5em;
+}
 
 /* --- Gallery page --- */
 .gallery-header {
@@ -254,6 +259,83 @@ body {
   text-transform: uppercase;
   margin: 0;
 }
+
+/* --- Dossier page --- */
+.dossier-header {
+  padding: var(--space-lg) var(--space) var(--space);
+  max-width: 900px;
+  margin: 0 auto;
+  border-bottom: 1px solid var(--accent-dim);
+}
+.dossier-header__back {
+  display: inline-block;
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  color: var(--text-muted);
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+.dossier-header__back:hover { color: var(--accent); }
+.dossier-header__title {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin: 0;
+}
+.dossier-header__meta {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin: 0.5rem 0 0;
+}
+.dossier-header--with-bg {
+  position: relative;
+  min-height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.dossier-header--with-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: var(--hero-bg);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.18;
+  z-index: 0;
+}
+.dossier-header--with-bg .dossier-header__back,
+.dossier-header--with-bg .dossier-header__title,
+.dossier-header--with-bg .dossier-header__meta { position: relative; z-index: 1; }
+
+.dossier-gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  max-width: 480px;
+}
+.dossier-gallery__item {
+  margin: 0;
+}
+.dossier-gallery__item img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: center;
+  background: rgba(232, 228, 220, 0.06);
+  border: 1px solid var(--accent-dim);
+}
+.dossier-gallery__caption {
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin: 0.75rem 0 0;
+}
+
 .gallery {
   padding: var(--space-lg) var(--space);
   max-width: 1100px;
